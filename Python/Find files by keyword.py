@@ -1,5 +1,7 @@
 import os
 
+# Simple fuzzy searching of file names in a directory that match a given (non-regex) pattern
+
 def stop():
     print('________ Search exited ________')
 
