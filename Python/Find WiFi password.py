@@ -6,7 +6,11 @@
 # > allows you to spawn new processes
 # > connect to their input/output/error pipes
 # > and obtain their return codes
+
 import subprocess
+
+# Simple banner for: 'type "exit" to exit'
+print(f"{'-'*80}\nType \"exit\" to quit this shell {'-'*80}\n")
 
 # Get Wifi network names
 names = subprocess.Popen("netsh wlan show profiles", shell=True, stdout=subprocess.PIPE)
