@@ -1,0 +1,65 @@
+Recursion
+C Language supports function back-tracking which involves recursion. In the process of recursion, a function is called within another function for multiple numbers of times.
+
+Pointers
+C enables users to directly interact with memory using the pointers. We use pointers in memory, structure, functions, arrays, stack and many more.
+
+Faster
+C Language comes with a minimal number of libraries and built-in functions which makes the compile and execution-times to be less and the system faces low overhead.
+
+Memory Management
+C provides the best in class memory management. It can both allocate and deallocate memory dynamically. the malloc(), calloc(), realloc() functions are used to allocate memory dynamically and free() function is used to deallocate the used memory at any instance of time.
+
+Derived Datatypes
+
+A derived type is formed by using one or more basic types in combination. They are the object types whose functionalities are predefined in the C libraries.
+
+Function types
+Pointer types
+Array types
+Structure types
+Union types
+Enumeration Datatypes
+
+Enumerated Datatypes are used to declare Integral constants in C programming language so that the integral constant names are easy to remember and maintain. The keyword enum is used to declare enumerated datatypes.
+
+example:  enum plug{on = 1, off = 0}; 
+
+Void Datatypes
+
+The void data type is an empty data type that is used as a return type for the functions that return no value in C.
+
+example:
+
+void  function(int n)
+int function(void)
+
+
+Variables in C
+
+Variable is defined as the reserved memory space which stores a value of a definite datatype. The value of the Variable is not constant, instead, it allows changes. There are mainly five types of variables supported in C.
+local variable
+global variable
+static variable
+automatic variable
+external variable
+Local Variables
+
+Any variable that is declared at the inside a code block or a function and has the scope confined to that particular block of code or function is called to be a local variable.
+
+Global Variables
+Any variable that is declared at the outside a code block or a function and has the scope across the entire program and allows any function to change it’s value is known as Global Variable.
+
+Static Variables
+Any variable that is declared using the keyword static is known as a Static Variable. Static Variables retain the declared value throughout the entire execution of the program and will not be changed between multiple function calls.
+
+Functions
+Functions in C Program are defined as the subdivided program of the main program. Functions provide code reusability and decrease code complexity.
+
+Variables
+Variable is defined as a name declared to a store the values in a C Program. Every variable used in C has a specific data type that determines the size and layout of the variable’s memory.
+
+Statements & Expressions
+Statements are nothing but the instructions we provide to the computer to compile and the expressions, on the other hand, are considered to be the mathematical or the logical statements which yield into a resultant value.
+
+
