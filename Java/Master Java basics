@@ -1,0 +1,49 @@
+Visit : https://www.edureka.co/blog/java-tutorial/
+Advantages of Java Programming Language:
+Open Source
+
+Java since its birth, till today, is an open-source product and it has all the public access. programmers are free to post entire source code for anyone to download, copy, redistribute them, which is usually part of the GPL  (General Public License,) the license that usually comes with open-source software.
+
+High Performance
+
+Java is an interpreted language, so it will never be as fast as a compiled language like C or C++. But, Java enables high performance with the use of the just-in-time compiler.
+
+Multi-Threading
+
+Java multithreading feature makes it possible to write a program that can do many tasks simultaneously. The benefit of multithreading is that it utilizes the same memory and other resources to execute multiple threads at the same time, like While typing, grammatical errors are checked along.
+
+Secure
+
+When it comes to security, Java is always the first choice. With java secure features it enables us to develop virus-free, temper free system. Java program always runs in Java runtime environment with almost null interaction with system OS, hence it is more secure.
+
+Platform independent
+
+Unlike other programming languages such as C, C++ etc which are compiled into platform-specific machines. Java is guaranteed to be write-once, run-anywhere language. On compilation, Java program is compiled into bytecode. This bytecode is platform-independent and can be run on any machine, plus this bytecode format also provides security. Any machine with Java Runtime Environment can run Java Programs.
+
+Portability
+
+The cross-platform feature enables the Java code to be highly portable. Programmers can write code in windows and execute the same code in Linux Operating System.
+
+Object-Oriented
+
+In java, everything is an object which has some data and behaviour. Java can be easily extended as it is based on Object Model.
+
+Robust
+
+Java makes an effort to eliminate error-prone codes by emphasizing mainly on compile-time error checking and runtime checking. But the main areas which Java improved were Memory Management and mishandled Exceptions by introducing automatic Garbage Collector and Exception Handling.
+
+Java Tutorial: Member Variables
+A member variable plays a major role in a class as it is used to store a data value. When we define a class, we can declare a member variable. These variables are members of a class.
+Member variables are further classified into three types:
+
+Local variable
+Instance variable
+Class/Static variable
+
+Data Operators
+There are mainly 4 different types of operators, which are listed below:
+
+Arithmetic Operator: Perform arithmetic operations such as addition, subtraction, multiplication, division and modulus.
+Unary Operator: Unary operators are used to increments or decrements a particular value. For example: ++ stands for increment, – – stands for decrements.
+Relational Operator: It defines some kind of relation between two entities. For example: <, >, <=, >=, !=, ==.
+Logical Operator: Logical operators are typically used with boolean (logical) values.
