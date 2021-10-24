@@ -1,0 +1,33 @@
+#include <stdio.h>
+int num(int num1, int num2){
+	int numerator=0,denominator=0,remainder=0;
+	if(num1>num2){
+	    numerator = num1;
+	    denominator = num2;
+		
+	}
+	else{
+		numerator = num2;
+		denominator = num1;
+		
+	}
+	remainder =numerator % denominator;
+	while(remainder != 0){
+		numerator = denominator;
+		denominator = remainder;
+		remainder = numerator % denominator;
+	}
+	int gcd = denominator;
+	int lcm = num1 * num2 / gcd;
+	printf("\nGCD of %d an %d is %d",num1,num2,gcd);
+	printf("\nLCM of %d an %d is %d",num1,num2,lcm);
+
+}
+int main(){
+	int num(int num1,int num2);
+	int num1,num2;
+	printf("enter two numbers");
+	scanf("%d %d",&num1,&num2);
+	num(num1,num2);
+	return 0;
+}
