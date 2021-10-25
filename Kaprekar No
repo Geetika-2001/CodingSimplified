@@ -1,0 +1,24 @@
+import java.util.*;
+class KaprekarNo
+{
+   public static void main(String args[])
+   {
+      int digit=0,num,n,sq,rem,quo;
+      Scanner sc=new Scanner(System.in);
+      System.out.println("Enter a number:");
+      num=sc.nextInt();
+      n=num;
+      sq=num*num; 
+      while(num>0)
+      {
+         digit++;
+         num=num/10;
+      }
+      rem=sq%(int)Math.pow(10,digit);
+      quo=sq/(int)Math.pow(10,digit);  
+      if((rem+quo)==n)
+         System.out.println(n+" is a Kaprekar number");
+      else
+         System.out.println(n+" is not a Kaprekar number");
+   }
+}
