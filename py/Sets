@@ -1,0 +1,16 @@
+s = {"Blueberry", "Rasberry"}
+print(s)  # prints in random order n cant be iterated
+s.add('Strawberry')
+print(s)
+s.add("Blueberry")  # wont add duplicate items
+print(s)
+list = [1, 2, 3, 3, 4, 4, 4, 5]
+print(list)
+no_duplicate_set = set(list)  # removes duplicates in list n prints a set
+print(no_duplicate_set)
+s2 = {"Watermelon", "Mango", "Rasberry", "Melon"}
+print(s.intersection(s2))  # intersection of two sets
+print(s.union(s2))  # union of two sets
+print(s2.difference(s))  # difference of sets
+print(s2.clear())
+
