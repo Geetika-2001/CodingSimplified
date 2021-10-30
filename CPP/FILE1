@@ -1,0 +1,31 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+int i,j,k;
+clrscr();
+for(i=1;i<=15;i++){
+for(j=i;j<15;j++)
+cout<<" ";
+k=2*i-1;
+while(k>=1){
+cout<<"*";
+k--;
+}
+cout<<"
+";
+}
+for(i=14;i>=1;i--){
+for(j=i;j<15;j++)
+cout<<" ";
+k=2*i-1;
+while(k>=1)
+{
+cout<<"*";
+k--;
+}
+cout<<"
+";
+}
+getch();
+}
