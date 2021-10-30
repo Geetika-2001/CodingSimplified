@@ -1,0 +1,11 @@
+list1 = [1, 2, 3, 4, 5]
+list2 = ['one', 'two', 'three', 'four', 'five']
+zipped = list(zip(list1, list2))
+print(zipped)  # prints a list of tuples of coressponding elements of the two
+# lists
+# If lists are of not same length i.e. if we add 6 to list1 it will be ignored
+# and not be shown in the pairs
+# If we have three lists groups of tuples of three elements will be generated
+unzipped = list(zip(*zipped))  # Unzips into original lists, * is necessary
+for i in unzipped:
+    print(list(i))
