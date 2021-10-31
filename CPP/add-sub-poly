@@ -1,0 +1,238 @@
+#include<iostream.h>
+#include<conio.h>
+#include<process.h>
+
+//   Creating a NODE Structure
+struct node
+{
+   int coe,exp;        // data
+   struct node *next;  // link to next node and previous node
+};
+
+// Creating a class Polynomial
+class polynomial
+{
+   struct node *start,*ptrn,*ptrp;
+   public:
+     void get_poly(); // to get a polynomial
+     void show();     // show
+     void add(polynomial p1,polynomial p2); // Add two polynomials
+     void subtract(polynomial p1,polynomial p2); //Subtract2 
+polynomials
+};
+
+void polynomial::get_poly()      //  Get Polynomial
+{
+   char c='y';
+   ptrn=ptrp=start=NULL;
+   while(c=='y' || c=='Y')
+   {
+      ptrn=new node;
+      ptrp->next=ptrn;
+      if(start==NULL)
+	start=ptrn;
+      ptrp=ptrn;
+      cout<<"
+Enter the coefficient: ";
+      cin>>ptrn->coe;
+      cout<<"Enter the exponent: ";
+      cin>>ptrn->exp;
+      ptrn->next=NULL;
+      cout<<"Enter y to add more nodes: ";
+      cin>>c;
+   }
+   return;
+}
+
+
+void polynomial::show()  // Show Polynomial
+{
+    struct node *ptr;
+    ptr=start;
+    while(ptr!=NULL)
+    {
+       cout<<ptr->coe<<"X^"<<ptr->exp<<" + ";
+       ptr=ptr->next;
+    }
+    cout<<" ";
+}
+
+void polynomial::add(polynomial p1,polynomial p2)  // Add Polynomials
+{
+   struct node *p1ptr,*p2ptr;
+   int coe,exp;
+   ptrn=ptrp=start=NULL;
+   p1ptr=p1.start;
+   p2ptr=p2.start;
+   while(p1ptr!=NULL && p2ptr!=NULL)
+   {
+      if(p1ptr->exp==p2ptr->exp) // If coefficients are equal
+      {
+	 coe=p1ptr->coe+p2ptr->coe;
+	 exp=p1ptr->exp;
+	 p1ptr=p1ptr->next;
+	 p2ptr=p2ptr->next;
+      }
+      else if(p1ptr->exp>p2ptr->exp)
+      {
+	 coe=p1ptr->coe;
+	 exp=p1ptr->exp;
+	 p1ptr=p1ptr->next;
+      }
+      else if(p1ptr->exp<p2ptr->exp)
+      {
+	 coe=p2ptr->coe;
+	 exp=p2ptr->exp;
+	 p2ptr=p2ptr->next;
+      }
+      ptrn=new node;
+      if(start==NULL)
+	 start=ptrn;
+      ptrn->coe=coe;
+      ptrn->exp=exp;
+      ptrn->next=NULL;
+      ptrp->next=ptrn;
+      ptrp=ptrn;
+   } // End of While
+   if(p1ptr==NULL)
+   {
+      while(p2ptr!=NULL)
+      {
+	 coe=p2ptr->coe;
+	 exp=p2ptr->exp;
+	 p2ptr=p2ptr->next;
+	 ptrn=new node;
+	 if(start==NULL)
+	    start=ptrn;
+	 ptrn->coe=coe;
+	 ptrn->exp=exp;
+	 ptrn->next=NULL;
+	 ptrp->next=ptrn;
+	 ptrp=ptrn;
+      }
+   }
+   else if(p2ptr==NULL)
+   {
+      while(p1ptr!=NULL)
+      {
+	 coe=p1ptr->coe;
+	 exp=p1ptr->exp;
+	 p1ptr=p1ptr->next;
+	 ptrn=new node;
+	 if(start==NULL)
+	    start=ptrn;
+	 ptrn->coe=coe;
+	 ptrn->exp=exp;
+	 ptrn->next=NULL;
+	 ptrp->next=ptrn;
+	 ptrp=ptrn;
+      }
+   }
+}  // End of addition
+
+//  Subtract two polynomials
+void polynomial::subtract(polynomial p1,polynomial p2)  // Subtract
+{
+   struct node *p1ptr,*p2ptr;
+   int coe,exp;
+   ptrn=ptrp=start=NULL;
+   p1ptr=p1.start;
+   p2ptr=p2.start;
+   while(p1ptr!=NULL && p2ptr!=NULL)
+   {
+      if(p1ptr->exp==p2ptr->exp) // If coefficients are equal
+      {
+	 coe=p1ptr->coe-p2ptr->coe;
+	 exp=p1ptr->exp;
+	 p1ptr=p1ptr->next;
+	 p2ptr=p2ptr->next;
+      }
+      else if(p1ptr->exp>p2ptr->exp)
+      {
+	 coe=p1ptr->coe;
+	 exp=p1ptr->exp;
+	 p1ptr=p1ptr->next;
+      }
+      else if(p1ptr->exp<p2ptr->exp)
+      {
+	 coe=0-p2ptr->coe;
+	 exp=p2ptr->exp;
+	 p2ptr=p2ptr->next;
+      }
+      ptrn=new node;
+      if(start==NULL)
+	 start=ptrn;
+      ptrn->coe=coe;
+      ptrn->exp=exp;
+      ptrn->next=NULL;
+      ptrp->next=ptrn;
+      ptrp=ptrn;
+   } // End of While
+   if(p1ptr==NULL)
+   {
+      while(p2ptr!=NULL)
+      {
+	 coe=0-p2ptr->coe;
+	 exp=p2ptr->exp;
+	 p2ptr=p2ptr->next;
+	 ptrn=new node;
+	 if(start==NULL)
+	    start=ptrn;
+	 ptrn->coe=coe;
+	 ptrn->exp=exp;
+	 ptrn->next=NULL;
+	 ptrp->next=ptrn;
+	 ptrp=ptrn;
+      }
+   }
+   else if(p2ptr==NULL)
+   {
+      while(p1ptr!=NULL)
+      {
+	 coe=p1ptr->coe;
+	 exp=p1ptr->exp;
+	 p1ptr=p1ptr->next;
+	 ptrn=new node;
+	 if(start==NULL)
+	    start=ptrn;
+	 ptrn->coe=coe;
+	 ptrn->exp=exp;
+	 ptrn->next=NULL;
+	 ptrp->next=ptrn;
+	 ptrp=ptrn;
+      }
+   }
+}  // End of subtraction
+
+
+int main()
+{
+   clrscr();
+   polynomial p1,p2,sum,diff;
+   cout<<"First Polynomial.
+";
+   p1.get_poly();
+   cout<<"
+Second polynomial.
+";
+   p2.get_poly();
+   clrscr();
+   cout<<"
+The First polynomial is: ";
+   p1.show();
+   cout<<"
+The second polynomial is: ";
+   p2.show();
+   cout<<"
+
+The sum of two polynomials is: ";
+   sum.add(p1,p2);
+   sum.show();
+   cout<<"
+
+The difference of two polynomials is: ";
+   diff.subtract(p1,p2);
+   diff.show();
+   getch();
+   return 0;
+}
