@@ -24,4 +24,4 @@ print(estimate_pi(100000))
 print(estimate_pi(1000000))
 print(estimate_pi(10000000))
 
-
+# This code is inspired by Joma Tech's video "https://www.youtube.com/watch?v=pvimAM_SLic&t=7s"
