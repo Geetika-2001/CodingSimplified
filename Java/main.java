@@ -1,0 +1,1 @@
+class InvalidMarksException {InvalidMarksException(String s){super(s);}}
