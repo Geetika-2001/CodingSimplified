@@ -1,0 +1,23 @@
+import java.util.Scanner;
+// Time Complexity :Best O(1) -> Constant ,Worst Case : O(n)
+
+public class linearsearch {
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+
+        int[] arr= {3 , 45, 67 , 23 , 56};
+        int target=in.nextInt();
+
+        linear(arr, target);
+
+    }
+
+    static int linear(int[] arr ,int target) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
+                System.out.println(i);
+            }
+        }
+        return target;
+    }
+}
