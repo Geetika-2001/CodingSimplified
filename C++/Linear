@@ -38,3 +38,4 @@ int main()
     else
         cout<<"\nNothing found";
 }
+//Added from Stack Overflow
