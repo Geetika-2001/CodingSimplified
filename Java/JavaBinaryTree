@@ -1,0 +1,20 @@
+public class BinaryTreeJava {
+    static class Node{
+        int data; // Value of Node
+        Node left;//Left Node Reference
+        Node right;//Right Node Reference
+
+        public Node(int Val){//contructor for Node Definition
+            data=Val;
+            right = null;
+            left = null;
+        }
+    }
+
+    public static void main(String[] args) {
+        Node root =new Node(1);
+        root.left=new Node(2);
+        root.right=new Node(3);
+        root.left.right=new Node(5);
+    }
+}
